@@ -17,6 +17,8 @@ Jekyll is written in Ruby. To get started, you'll need Ruby and Ruby on Rails.
 
 - Install Jekyll: `gem install jekyll`
 - Create a new Jekyll project: `jekyll new my-project`
+- Run Jekyll: `bundle exec jekyll serve`
+or
 - Run Jekyll: `jekyll serve`
 
 ## Front Matter
@@ -38,3 +40,16 @@ date:   2024-03-15 21:58:54 +0000
 categories: jekyll update
 ---
 ```
+
+## Jekyll Posts
+
+- post filenames follow the `YYYY-MM-DD-name.extension` format
+
+## Drafts
+
+- Drafts: https://jekyllrb.com/docs/drafts
+- you need to create a directory `_drafts` in your Jekyll project
+- add your draft to the `_drafts` directory by adding `filename.md`
+- run `jekyll serve --drafts` to see your draft
+- if you move the file to `_posts`, it will be published, but you need to name it with the `YYYY-MM-DD-name.extension` format
+
