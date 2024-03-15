@@ -59,3 +59,35 @@ categories: jekyll update
 - Pages on the website that aren't posts or drafts are pages. Pages are used to add additional content to your site, such as blog posts, project pages, and other content that you want to share with your readers.
 - they are markdown files in the root of the project
 - you just need to add front matter and content to your page.
+
+## Permalinks
+
+- Permalinks: https://jekyllrb.com/docs/permalinks
+- Permalinks are used to create URLs for your posts, pages, and other content.
+- frontmatter key `permalink` is used to set the permalink
+
+example:
+
+```yaml
+---
+layout: post
+title:  "Welcome to Jekyll!"
+date:   2024-03-15 21:58:54 +0000
+categories: jekyll update
+permalink: /my-permalink
+---
+```
+
+- permalink can be used with variables to create dynamic URLs.
+- can be set to `:title` or `:year/:month/:day/:title`
+- can be set to `:slug` or `:year/:month/:day/:slug`
+- can be set to `:id` or `:year/:month/:day/:id`
+- can be set to `:categories` or `:year/:month/:day/:categories`
+- even with custom extensions, you can set it to `:title.html` or `:year/:month/:day/:title.html`
+
+## Jekyll Tutorials
+
+- Jekyll Tutorials: https://jekyllrb.com/tutorials
+- Jekyll Tutorials are a series of Jekyll tutorials that cover different aspects of Jekyll. They are meant to help you get started with Jekyll.
+- Jekyll Tutorials are written in Markdown and can be created in any text editor.
+- Jekyll Tutorials are organized into categories, such as "Getting Started" or "Advanced".
