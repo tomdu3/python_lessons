@@ -53,3 +53,9 @@ categories: jekyll update
 - run `jekyll serve --drafts` to see your draft
 - if you move the file to `_posts`, it will be published, but you need to name it with the `YYYY-MM-DD-name.extension` format
 
+## Creating Pages
+
+- Pages: https://jekyllrb.com/docs/pages
+- Pages on the website that aren't posts or drafts are pages. Pages are used to add additional content to your site, such as blog posts, project pages, and other content that you want to share with your readers.
+- they are markdown files in the root of the project
+- you just need to add front matter and content to your page.
