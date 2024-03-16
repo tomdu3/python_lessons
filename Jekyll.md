@@ -1,3 +1,4 @@
+
 # Jekyll Tutorial
 
 ## What is Jekyll?
@@ -282,4 +283,44 @@ occupation: 'HR Officer'
 {% for person in site.data.people %}
   {{ person.name }} - {{ person.occupation }}
 {% endfor %}
+```
+
+## Static Files
+
+- Static Files: https://jekyllrb.com/docs/static-files
+- static files are used to store static content in Jekyll
+- static files are files that don't have frontmatter
+- we can create a folder `assets` (for example) in the root of the project and we can put in all the static files: images, css, js, pdf, etc
+
+example:
+
+```html
+<img src="assets/images/python.png">
+{{ file.path }}
+```
+
+- you can access:
+  - `{{ file.path }}` - the path of the file
+  - `{{ file.extname }}` - the extension of the file
+  - `{{ file.name }}` - the name of the file
+  - `{{ file.basename }}` - the base name of the file
+  - `{{ file.dirname }}` - the directory name of the file
+  - `{{ file.url }}` - the url of the file
+
+- you can also give frontmatter to these files
+- you can add defaults for these files in the `_config.yml` file
+
+```yaml
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
+```
+
+- then in html layout
+```html
+{% if file.image %}
+  <img src="{{ file.path }}" alt="{{ file.name }}">
+{% endif %}
 ```
