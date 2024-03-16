@@ -138,3 +138,10 @@ permalink: /my-permalink
 - run it again `bundle exec jekyll serve`
 
 - there will be errors - missing layouts if the theme doesn't have these - we can see on the GitHub which layouts the theme has
+
+
+## Layouts
+
+- Layouts: https://jekyllrb.com/docs/layouts
+- theme is defining the layout for each page
+- 
