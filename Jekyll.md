@@ -144,4 +144,44 @@ permalink: /my-permalink
 
 - Layouts: https://jekyllrb.com/docs/layouts
 - theme is defining the layout for each page
-- 
+- can be overridden:
+  - we make a folder `_layouts` in the root of the project
+  - inside we place the layout as html file
+  - once you make the layout file, you use the variables to get the content of the page
+  - `{{ content }}` - placeholder for all of the content of the page
+- the name of the layout is the name of the html file in the `_layouts` folder
+
+- you can also define different levels of layouts
+- high level layout - that all the pages are using
+- low level layout - that specific page is using
+
+example high level (`wrapper.html`):
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    Wrapper
+    <br>
+    {{ content }}
+    <br>
+    Wrapper
+</body>
+</html>
+```
+
+example of low level:
+```html
+---
+layout: wrapper
+---
+<h1>This is a post</h1>
+
+<hr>
+
+{{ content }}
+```
