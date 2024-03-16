@@ -185,3 +185,28 @@ layout: wrapper
 
 {{ content }}
 ```
+
+## Variables
+
+- Variables: https://jekyllrb.com/docs/variables
+- variables are used to set the content of the page - `{{ content }}`
+- we can define variables in front matter
+<br>
+- `{{ content }}` - placeholder for all of the content of the page
+- `{{ page.title }}` - placeholder for the title of the page
+<br>
+- defining variable inside front matter:
+  - example:
+  ```yaml
+  layout: post
+  title: My Title
+  ---
+  {{ layout.title }}
+  ```
+- this will only work inside the layout
+
+- when we want to access the variables from the actual page (front matter), we use `{{ page.title }}`, etc.
+- when we want to access the variables from the `_config.yml`, we use `{{ site.title }}`, for example for meta descriptions, title, etc.
+
+
+
