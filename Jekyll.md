@@ -216,3 +216,24 @@ layout: wrapper
 - you can make a folder `_includes` in the root of the project and in it you can put the HTML files
 
 
+## Looping through posts
+- need to loop through all the posts (pages)
+- `index.md` - uses `home` layout
+<br>
+
+- loop through all the posts - `layout: home`
+
+```html
+{% for post in site.posts %}
+
+{{ post.title }} <br>
+
+{% endfor %}
+```
+
+- you can loop through all the pages
+
+```html
+{% for page in site.pages %}
+```
+
