@@ -7,6 +7,19 @@ author: John Doe
 <li><a style="{% if page.url == post.url %}color: red;{% endif %}" href="{{ post.url }}">{{ post.title }}</a></li>
 
 {% endfor %}
+
+{% for file in site.static_files %}
+    {% if file.path contains '.md' %}
+    {% else %}
+        {% if file.image %}
+            <img src="{{ file.path }}" alt="{{ file.name }}" width="300"> <br>
+        {% else %}
+            <a href="{{ file.path }}">{{ file.name }}</a> <br>
+        {% endif %}
+    {% endif %}
+    
+{% endfor %}
+
 <h2>{{ page.title }}</h2>
 <h3>{{ layout.author }}</h3>
 <hr>
