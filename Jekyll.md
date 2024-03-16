@@ -85,9 +85,39 @@ permalink: /my-permalink
 - can be set to `:categories` or `:year/:month/:day/:categories`
 - even with custom extensions, you can set it to `:title.html` or `:year/:month/:day/:title.html`
 
+
 ## Jekyll Tutorials
 
 - Jekyll Tutorials: https://jekyllrb.com/tutorials
 - Jekyll Tutorials are a series of Jekyll tutorials that cover different aspects of Jekyll. They are meant to help you get started with Jekyll.
 - Jekyll Tutorials are written in Markdown and can be created in any text editor.
 - Jekyll Tutorials are organized into categories, such as "Getting Started" or "Advanced".
+
+## Front Matter Defaults
+
+- Front Matter Defaults: https://jekyllrb.com/docs/front-matter-defaults
+- Front Matter Defaults are used to set default values for front matter in Jekyll.
+
+- we can do that by adding the following to your `_config.yml` file:
+  - defaults variable: `defaults: [page]`
+
+  ```yaml
+  defaults:
+  -
+    scope:
+      path: ""
+      type: "post"
+    values:
+      layout: "post"
+  ```
+
+- `defaults` variable is an array of objects, each object represents a default value for a specific front matter key.
+- `scope` variable is used to set the scope of the default value.
+- `values` variable is used to set the values of the default value.
+- `layout` variable is used to set the layout of the default value.
+- `path` variable is used to set the path of the default value.
+- `type` variable is used to set the type of the default value.
+
+- whenever you change -config.yml, you need to restart your server.
+
+- because we defined defaults variable in `_config.yml`, we don't need to specify front matter at the beginning of each post.
