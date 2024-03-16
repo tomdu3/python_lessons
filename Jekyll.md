@@ -209,4 +209,10 @@ layout: wrapper
 - when we want to access the variables from the `_config.yml`, we use `{{ site.title }}`, for example for meta descriptions, title, etc.
 
 
+## Includes
+- enables you to include content from other files
+- you can take components like navigation, footer, etc, and abstract them into separate HTML files and include them in your Jekyll site
+<br>
+- you can make a folder `_includes` in the root of the project and in it you can put the HTML files
+
 
