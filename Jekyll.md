@@ -237,3 +237,21 @@ layout: wrapper
 {% for page in site.pages %}
 ```
 
+## Conditionals
+
+- `if` statements
+- `elsif` statements
+- `unless` statements
+
+```html
+{% if page.title == "Test" %}
+    This is the first post
+{% endif %}
+```
+
+another example:
+```html
+{% for post in site.posts %}
+  <li><a style="{% if page.url == post.url %}color: red;{% endif %}" href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+```
