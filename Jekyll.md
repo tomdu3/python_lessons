@@ -255,3 +255,31 @@ another example:
   <li><a style="{% if page.url == post.url %}color: red;{% endif %}" href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 ```
+
+## Datafiles
+
+- Datafiles: https://jekyllrb.com/docs/datafiles
+- datafiles are used to store data in Jekyll
+- we can create a folder `_data` in the root of the project and we can put in all the datafiles: yaml, json, csv
+
+example:
+let us make a yaml file `people.yml` in `_data` folder
+
+```yaml
+---
+name: 'Tom'
+occupation: 'Software Engineer'
+---
+
+name: 'Dragan'
+occupation: 'HR Officer'
+---
+```
+
+- we can access the data in the yaml file using `{{ site.data.people }}`
+
+```html
+{% for person in site.data.people %}
+  {{ person.name }} - {{ person.occupation }}
+{% endfor %}
+```
