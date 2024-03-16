@@ -121,3 +121,20 @@ permalink: /my-permalink
 - whenever you change -config.yml, you need to restart your server.
 
 - because we defined defaults variable in `_config.yml`, we don't need to specify front matter at the beginning of each post.
+
+## Themes
+
+- Themes: https://jekyllrb.com/docs/themes
+- Themes are used to customize the look and feel of your Jekyll site.
+- Themes are written in Sass and can be created in any text editor.
+- Themes are organized into categories, such as "Minimal" or "Modern".
+
+- default theme is `minima`
+- you can change the default theme in `_config.yml`
+- find a theme that you want to use: https://rubygems.org 
+- go to `Homepage` for more information (usually GitHub repository) and you can see the preview of the theme
+- you go to `Gemfile` and add the theme: `gem 'jekyll-theme-hacker'`
+- then go to the terminall and run `bundle install`
+- run it again `bundle exec jekyll serve`
+
+- there will be errors - missing layouts if the theme doesn't have these - we can see on the GitHub which layouts the theme has
